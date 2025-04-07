@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="he">
-  <head>
-    <meta charset="UTF-8" />
-    <title>האתר הראשון שלי</title>
-  </head>
-  <body style="direction: rtl; text-align: center; font-family: Arial;">
-    <h1>ברוך הבא לאתר שלי!</h1>
-    <p>אני לומד עכשיו איך בונים אתרים 😎</p>
-    <p> lets see how this changes</p>
-    <ol>
-      <li>first</li>
-      <li>second</li>
-    </ol>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHECKMATE</title>
+</head>
+<body>
+    <h1>CHECKMATE</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept="application/pdf" required>
+        <button type="submit">Upload PDF</button>
+    </form>
+
+    {% if first_line %}
+        <h2>First Line of PDF:</h2>
+        <p>{{ first_line }}</p>
+    {% endif %}
+</body>
 </html>
